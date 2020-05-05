@@ -398,20 +398,7 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
-<p>这是百度的介绍</p>
-<p>1 把主页配置文件<code>_config.yml</code> 里的<code>post_asset_folder:</code>这个选项设置为<code>true</code></p>
-<p>2 在你的hexo目录下执行这样一句话<code>npm install hexo-asset-image --save</code>，这是下载安装一个可以上传本地图片的插件，来自dalao：</p>
-<p>3 等待一小段时间后，再运行<code>hexo n &quot;xxxx&quot;</code>来生成md博文时，<code>/source/_posts</code>文件夹内除了<code>xxxx.md</code>文件还有一个同名的文件夹</p>
-<p>4 最后在<code>xxxx.md</code>中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx&#x2F;图片名.jpg)</span><br></pre></td></tr></table></figure>
-
-<p>注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
-<p>5 最后检查一下，<code>hexo g</code>生成页面后，进入<code>public\</code></p>
-</blockquote>
-<h1 id="测试过程"><a href="#测试过程" class="headerlink" title="测试过程"></a>测试过程</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="keyword">import</span> random    </span><br><span class="line"> <span class="number">2</span> <span class="keyword">if</span> __name__ ==<span class="string">"__main__"</span>:    <span class="comment">#四位数字字母验证码的生成</span></span><br><span class="line"> <span class="number">3</span>     checkcode=<span class="string">""</span> <span class="comment">#保存验证码的变量</span></span><br><span class="line"> <span class="number">4</span>     <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line"> <span class="number">5</span>         index=random.randrange(<span class="number">0</span>,<span class="number">4</span>)  <span class="comment">#生成一个0~3中的数</span></span><br><span class="line"> <span class="number">6</span>         <span class="keyword">if</span> index!=i <span class="keyword">and</span> index +<span class="number">1</span> !=i:</span><br><span class="line"> <span class="number">7</span>             checkcode +=chr(random.randint(<span class="number">97</span>,<span class="number">122</span>))  <span class="comment"># 生成a~z中的一个小写字母</span></span><br><span class="line"> <span class="number">8</span>         <span class="keyword">elif</span> index +<span class="number">1</span>==i:</span><br><span class="line"> <span class="number">9</span>             checkcode +=chr(random.randint(<span class="number">65</span>,<span class="number">90</span>) ) <span class="comment"># 生成A~Z中的一个大写字母</span></span><br><span class="line"><span class="number">10</span>         <span class="keyword">else</span>:</span><br><span class="line"><span class="number">11</span>             checkcode +=str(random.randint(<span class="number">1</span>,<span class="number">9</span>))  <span class="comment"># 数字1-9</span></span><br><span class="line"><span class="number">12</span>     print(checkcode)</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/05/05/test/E:%5Cpicture%5C222109.jpg" alt="img"></p>
+          <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p><img src="/2020/05/05/test/img1.jpg" alt="img"></p>
 
           
             <div class='article_footer'>
@@ -499,7 +486,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-05T16:12:51+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-05-05T16:25:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 5, 2020</p>
