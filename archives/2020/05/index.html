@@ -103,7 +103,7 @@
                 
                 
                 id="https:volantisjsorggetting-started">
-                <i class='fas fa-book fa-fw'></i>文档
+                <i class='fas fa-book fa-fw'></i>文档xx
               </a>
             </li>
           
@@ -114,16 +114,6 @@
                 
                 id="https:volantisjsorgarchives">
                 <i class='fas fa-rss fa-fw'></i>博文
-              </a>
-            </li>
-          
-            <li>
-              <a class="nav home"
-                href="https://volantis.js.org/examples/"
-                
-                
-                id="https:volantisjsorgexamples">
-                <i class='fas fa-play-circle fa-fw'></i>示例
               </a>
             </li>
           
@@ -428,8 +418,6 @@
         
           
         
-          
-        
       
     
     
@@ -448,8 +436,8 @@
         
           
   <h2 class="title">
-    <a href="/2020/05/04/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/">
-      你好，Hexo
+    <a href="/2020/05/05/test/">
+      test
     </a>
   </h2>
 
@@ -479,7 +467,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 4, 2020</p>
+    <p>发布于：May 5, 2020</p>
   </a>
 </div>
 
@@ -507,107 +495,20 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<p>这是百度的介绍</p>
+<p>1 把主页配置文件<code>_config.yml</code> 里的<code>post_asset_folder:</code>这个选项设置为<code>true</code></p>
+<p>2 在你的hexo目录下执行这样一句话<code>npm install hexo-asset-image --save</code>，这是下载安装一个可以上传本地图片的插件，来自dalao：</p>
+<p>3 等待一小段时间后，再运行<code>hexo n &quot;xxxx&quot;</code>来生成md博文时，<code>/source/_posts</code>文件夹内除了<code>xxxx.md</code>文件还有一个同名的文件夹</p>
+<p>4 最后在<code>xxxx.md</code>中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![你想输入的替代文字](xxxx&#x2F;图片名.jpg)</span><br></pre></td></tr></table></figure>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
+<p>注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
+<p>5 最后检查一下，<code>hexo g</code>生成页面后，进入<code>public\</code></p>
+</blockquote>
+<h1 id="测试过程"><a href="#测试过程" class="headerlink" title="测试过程"></a>测试过程</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="keyword">import</span> random    </span><br><span class="line"> <span class="number">2</span> <span class="keyword">if</span> __name__ ==<span class="string">"__main__"</span>:    <span class="comment">#四位数字字母验证码的生成</span></span><br><span class="line"> <span class="number">3</span>     checkcode=<span class="string">""</span> <span class="comment">#保存验证码的变量</span></span><br><span class="line"> <span class="number">4</span>     <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line"> <span class="number">5</span>         index=random.randrange(<span class="number">0</span>,<span class="number">4</span>)  <span class="comment">#生成一个0~3中的数</span></span><br><span class="line"> <span class="number">6</span>         <span class="keyword">if</span> index!=i <span class="keyword">and</span> index +<span class="number">1</span> !=i:</span><br><span class="line"> <span class="number">7</span>             checkcode +=chr(random.randint(<span class="number">97</span>,<span class="number">122</span>))  <span class="comment"># 生成a~z中的一个小写字母</span></span><br><span class="line"> <span class="number">8</span>         <span class="keyword">elif</span> index +<span class="number">1</span>==i:</span><br><span class="line"> <span class="number">9</span>             checkcode +=chr(random.randint(<span class="number">65</span>,<span class="number">90</span>) ) <span class="comment"># 生成A~Z中的一个大写字母</span></span><br><span class="line"><span class="number">10</span>         <span class="keyword">else</span>:</span><br><span class="line"><span class="number">11</span>             checkcode +=str(random.randint(<span class="number">1</span>,<span class="number">9</span>))  <span class="comment"># 数字1-9</span></span><br><span class="line"><span class="number">12</span>     print(checkcode)</span><br></pre></td></tr></table></figure>
 
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/05/04/hello-world/">
-      Hello World
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://xaoxuu.com" target="_blank" rel="nofollow noopener">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Mr. X</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 4, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'ok'</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="E:%5Cpicture%5C9658.jpg" alt="alt"></p>
+<p><img src="/2020/05/05/test/E:%5Cpicture%5C222109.jpg" alt="img"></p>
 
       
     </div>
@@ -686,7 +587,7 @@
           
         
           
-            <a href="https://music.163.com/#/user/home?id=63035382"
+            <a href="https://music.163.com/#/playlist?id=2770902965"
               class="social fas fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -775,7 +676,7 @@
             
           
             
-              <a href="https://music.163.com/#/user/home?id=63035382"
+              <a href="https://music.163.com/#/playlist?id=2770902965"
                 class="social fas fa-headphones-alt flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer">
